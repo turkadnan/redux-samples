@@ -1,4 +1,4 @@
-// Redux: Reducer Composition with Objects
+// Redux: Reducer Composition with combineReducers()
 
 const todo = (state, action) => {
   switch (action.type) {
@@ -40,12 +40,19 @@ const visibilityFilter = (state = "SHOW_ALL", action) => {
   }
 };
 
+const { combineReducers } = Redux;
+const todosApp = combineReducers({
+  todos: todos,
+  visibilityFilter: visibilityFilter
+});
+/*
 const todosApp = (state = {}, action) => {
   return {
     todos: todos(state.todos, action),
     visibilityFilter: visibilityFilter(state.visibilityFilter, action)
   };
 };
+*/
 
 const { createStore } = Redux;
 //const store = createStore(todos);
@@ -71,6 +78,6 @@ console.log(store.getState());
 console.groupEnd();
 
 console.group("Set visibility filter to SHOW_COMPLATED");
-store.dispatch({ type: "SET_VISIBILITY_FILTER", filter: 'SHOW_COMPLATED' });
+store.dispatch({ type: "SET_VISIBILITY_FILTER", filter: "SHOW_COMPLATED" });
 console.log(store.getState());
 console.groupEnd();
