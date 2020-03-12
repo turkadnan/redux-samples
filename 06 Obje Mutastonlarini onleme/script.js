@@ -1,4 +1,3 @@
-// Redux: Avoiding Array Mutations with concat(), slice(), and ...spread
 // Redux: Avoiding Object Mutations with Object.assign() and ...spread
 
 const toggleTodo = todo => {
