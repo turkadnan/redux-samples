@@ -1,3 +1,11 @@
+
+// const addTodo = todo =>
+//   ({
+//     type: "ADD_TODO",
+//     text: todo.text,
+//     id: todo.id
+//   })
+
 const addTodo = todo => {
   return dispatch => {
     dispatch({

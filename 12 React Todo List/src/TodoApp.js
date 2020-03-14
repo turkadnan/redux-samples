@@ -87,6 +87,18 @@ const mapStateToProps = state => {
   };
 };
 
+
+
 export default connect(mapStateToProps, { addTodo, toggleTodo, changeFilter })(
   TodoApp
 );
+
+
+// const mapDispatchToProps =dispatch=>({
+//     addTodo:(todo)=>dispatch(addTodo(todo))
+//   });
+
+
+  // export default connect(mapStateToProps, mapDispatchToProps)(
+  //   TodoApp
+  // );
